@@ -17,14 +17,29 @@ package com.dicoding.exam.latihan1
  *  Sesuaikan fungsi di bawah ini dengan kode untuk mengecek apakah parameter number
  *  merupakan angka genap
  */
-fun isEvenNumber(number: Int) = false
+fun isEvenNumber(number: Int): Boolean {
+    if (number % 2 == 0) {
+        return true
+    }
+
+    return false
+}
+
+// I tried to short the code like this "fun isEvenNumber(number: Int) = if (number % 2 == 0) true else false", but Intellij Idea show warning
+// 'Redundant If Statement', so i used code above
 
 /**
  *  TODO 2
  *  Sesuaikan fungsi di bawah ini dengan kode untuk mengecek apakah parameter number
  *  lebih dari 5
  */
-fun moreThanFive(number: Int) = false
+fun moreThanFive(number: Int): Boolean {
+    if (number > 5) {
+        return true
+    }
+
+    return false
+}
 
 /**
  *  TODO 3
@@ -33,7 +48,7 @@ fun moreThanFive(number: Int) = false
  *
  *      param * ( param + 10 )
  */
-fun result(number: Int) = 0
+fun result(number: Int) = number * (number + 10)
 
 fun main() {
     val listNumber = 1.rangeTo(100)
